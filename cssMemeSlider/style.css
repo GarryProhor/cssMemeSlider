@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+html {
+    width: 100%;
+    height: 100%;
+}
+:root {
+    /* Colors */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-blue: #71ABFF;
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: roboto, sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+.container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.slider {
+    margin: 0 32px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+}
+.items {
+    width: 500%;
+    display: flex;
+    transition: all 0.5s ease;
+}
+.item {
+    width: 100%;
+}
+.img {
+    width: 100%;
+    border-radius: 10px;
+}
+.text {
+    transform: translateY(29px);
+}
+.text-4 {
+    transform: translateY(-43px) !important;
+}
+.radio {
+    display: none;
+}
+.labels {
+    display: flex;
+    justify-content: end;
+}
+.label {
+    cursor: pointer;
+    position: relative;
+    background-color: var(--color-black);
+    transform: translateY(-70px);
+    z-index: 1;
+}
+.label div {
+    height: 18px;
+    width: 18px;
+    margin: 10px 4px;
+    display: block;
+    background-color: var(--color-blue);
+    border: 3px var(--color-blue) solid;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+.label:hover div {
+    border: 3px var(--color-white) solid;
+    background-color: var(--color-white);
+}
+.label:active div {
+    opacity: 0.6;
+}
+
+#slider-1:checked~.labels #label-1 div,
+#slider-2:checked~.labels #label-2 div,
+#slider-3:checked~.labels #label-3 div,
+#slider-4:checked~.labels #label-4 div,
+#slider-5:checked~.labels #label-5 div {
+    border: 3px var(--color-blue) solid;
+    background-color: transparent;
+}
+
+#slider-1:checked~.items {
+    transform: translateX(0);
+}
+#slider-2:checked~.items {
+    transform: translateX(-20%);
+}
+#slider-3:checked~.items {
+    transform: translateX(-40%);
+}
+#slider-4:checked~.items {
+    transform: translateX(-60%);
+}
+#slider-5:checked~.items {
+    transform: translateX(-80%);
+}
+.radio:checked~.labels .label:hover div {
+    border: 3px var(--color-white) solid !important;
+}
+
+@media (max-width: 900px) {
+    .labels {
+        transform: translateY(50px);
+        position: relative;
+        z-index: 1;
+    }
+    .text {
+        margin: 23px 0 10px;
+        transform: translateY(30px);
+    }
+}
+@media (max-width: 640px) {
+    .labels {
+        justify-content: center;
+        transform: translateY(30px);
+    }
+    .text {
+        transform: translateY(40px);
+    }
+    .text-4{
+        transform: translateY(25px) !important;
+    }
+}
+@media (max-width: 567px) {
+    .text-4{
+        transform: translateY(30px) !important;
+    }
+}
+@media (max-width: 425px) {
+    .text-4{
+        transform: translateY(40px) !important;
+    }
+}
+@media (max-width: 410px) {
+    .text {
+        transform: translateY(50px);
+    }
+    .text-4{
+        transform: translateY(50px) !important;
+    }
+}
+@media (max-width: 375px) {
+    .text-4{
+        transform: translateY(60px) !important;
+    }
+}
