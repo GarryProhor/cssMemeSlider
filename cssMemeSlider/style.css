@@ -21,14 +21,14 @@ body {
     color: var(--color-white);
 }
 .container {
-    max-width: 1200px;
+    max-width: 75rem;
     height: 100%;
-    margin: 100px auto;
+    margin: 6.25rem auto;
     display: flex;
     align-items: center;
 }
 .slider {
-    margin: 0 32px;
+    margin: 0 2rem;
     display: flex;
     flex-direction: column-reverse;
     overflow: hidden;
@@ -43,13 +43,13 @@ body {
 }
 .img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 .text {
-    transform: translateY(29px);
+    transform: translateY(1.813rem);
 }
 .text-4 {
-    transform: translateY(-43px) !important;
+    transform: translateY(-2.688rem) !important;
 }
 .radio {
     display: none;
@@ -62,16 +62,16 @@ body {
     cursor: pointer;
     position: relative;
     background-color: var(--color-black);
-    transform: translateY(-70px);
+    transform: translateY(-4.375rem);
     z-index: 1;
 }
 .label div {
-    height: 18px;
-    width: 18px;
-    margin: 10px 4px;
+    height: 1.125rem;
+    width: 1.125rem;
+    margin: 0.625rem 0.25rem;
     display: block;
     background-color: var(--color-blue);
-    border: 3px var(--color-blue) solid;
+    border: 0.188rem var(--color-blue) solid;
     border-radius: 50%;
     transition: all 0.2s ease;
 }
@@ -88,7 +88,7 @@ body {
 #slider-3:checked~.labels #label-3 div,
 #slider-4:checked~.labels #label-4 div,
 #slider-5:checked~.labels #label-5 div {
-    border: 3px var(--color-blue) solid;
+    border: 0.188rem var(--color-blue) solid;
     background-color: transparent;
 }
 
@@ -118,42 +118,42 @@ body {
         z-index: 1;
     }
     .text {
-        margin: 23px 0 10px;
+        margin: 1.438rem 0 0.625rem;
         transform: translateY(30px);
     }
 }
 @media (max-width: 640px) {
     .labels {
         justify-content: center;
-        transform: translateY(30px);
+        transform: translateY(1.875rem);
     }
     .text {
-        transform: translateY(40px);
+        transform: translateY(2.5rem);
     }
     .text-4{
-        transform: translateY(25px) !important;
+        transform: translateY(1.563rem) !important;
     }
 }
 @media (max-width: 567px) {
     .text-4{
-        transform: translateY(30px) !important;
+        transform: translateY(1.875rem) !important;
     }
 }
 @media (max-width: 425px) {
     .text-4{
-        transform: translateY(40px) !important;
+        transform: translateY(2.5rem) !important;
     }
 }
 @media (max-width: 410px) {
     .text {
-        transform: translateY(50px);
+        transform: translateY(3.125rem);
     }
     .text-4{
-        transform: translateY(50px) !important;
+        transform: translateY(3.125rem) !important;
     }
 }
 @media (max-width: 375px) {
     .text-4{
-        transform: translateY(60px) !important;
+        transform: translateY(3.75rem) !important;
     }
 }
