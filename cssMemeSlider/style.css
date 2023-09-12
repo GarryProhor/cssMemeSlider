@@ -60,7 +60,6 @@ body {
 }
 .label {
     cursor: pointer;
-    position: relative;
     background-color: var(--color-black);
     transform: translateY(-4.375rem);
     z-index: 1;
